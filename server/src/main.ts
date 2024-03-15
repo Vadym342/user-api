@@ -6,6 +6,8 @@ import { Logger } from 'nestjs-pino';
 
 import { AppModule } from './modules/app/app.module';
 import { useSwagger } from './utils/swagger';
+import { globalValidationPipe } from './pipe/global-validation.pipe';
+import { globalExceptionFilters } from './exceptions';
 
 config();
 
@@ -14,6 +16,8 @@ async function bootstrap(): Promise<void> {
 
   useSwagger(app);
   app.useLogger(app.get(Logger));
+  app.useGlobalPipes(globalValidationPipe);
+  app.useGlobalFilters(...globalExceptionFilters);
   app.useGlobalInterceptors(new ClassSerializerInterceptor(app.get(Reflector)));
 
   app.enableCors();

@@ -6,5 +6,4 @@ export type DatabaseException = Pick<Exception, 'name' | 'statusCode'> & {
 
 export type DatabaseExceptionError = ExceptionError & {
   pgCode?: string;
-  pgMessage?: string;
 };

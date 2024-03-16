@@ -12,7 +12,7 @@ export const getDataSourceConfig = (logger?: PinoLogger): SequelizeModuleOptions
   username: process.env.DB_USER,
   password: process.env.DB_PASS,
   logging: (sql, timing) => logger.info(sql, typeof timing === 'number' ? `Elapsed time: ${timing}ms` : ''),
-  modelPaths: [path.join(__dirname, '..', 'modules', '**', '*.entity{.ts,.js}')],
+  models: [path.join(__dirname, '..', '..', 'modules', '**', '*.entity{.ts,.js}')],
   autoLoadModels: true,
-  // synchronize: true, //! Migrations
+  synchronize: true, //! Migrations
 });

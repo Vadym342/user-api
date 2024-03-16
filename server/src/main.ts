@@ -4,10 +4,10 @@ import { NestExpressApplication } from '@nestjs/platform-express';
 import { config } from 'dotenv';
 import { Logger } from 'nestjs-pino';
 
-import { AppModule } from './modules/app/app.module';
-import { useSwagger } from './utils/swagger';
-import { globalValidationPipe } from './pipe/global-validation.pipe';
 import { globalExceptionFilters } from './exceptions';
+import { AppModule } from './modules/app/app.module';
+import { globalValidationPipe } from './pipe/global-validation.pipe';
+import { useSwagger } from './utils/swagger';
 
 config();
 

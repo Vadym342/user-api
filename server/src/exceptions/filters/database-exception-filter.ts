@@ -32,7 +32,6 @@ export class DatabaseExceptionFilter implements ExceptionFilter {
     if (process.env?.NODE_ENV !== 'production') {
       Object.assign(customException.errors[0], {
         pgCode: isCustom ? exception.databaseError['code'] : exception['code'],
-        pgMessage: isCustom ? exception.databaseError.message : exception.message,
       });
     }
 

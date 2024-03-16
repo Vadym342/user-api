@@ -38,6 +38,12 @@ export const api4xxDecoratorMap: Record<number, Api4xxDecoratorOptions> = {
       Some of the request inputs were not valid. 
       Check the response body for error details and see error messages.`,
   },
+  403: {
+    apiResponse: ApiNotFoundResponse,
+    name: 'ForbiddenException',
+    defaultDescription: `Forbidden<p> 
+      Make sure you provided the correct credentials.`,
+  },
   404: {
     apiResponse: ApiNotFoundResponse,
     name: 'NotFoundException',

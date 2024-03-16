@@ -8,7 +8,8 @@ type UsedExceptionStatusCodes =
   | HttpStatus.NOT_FOUND
   | HttpStatus.CONFLICT
   | HttpStatus.UNSUPPORTED_MEDIA_TYPE
-  | HttpStatus.UNPROCESSABLE_ENTITY;
+  | HttpStatus.UNPROCESSABLE_ENTITY
+  | HttpStatus.FORBIDDEN;
 
 type ApiResponseOptions = { description?: string; errors: ExceptionError[] };
 

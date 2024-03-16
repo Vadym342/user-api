@@ -1,11 +1,7 @@
 import { applyDecorators } from '@nestjs/common';
 import { ApiBody, ApiCreatedResponse, ApiOperation } from '@nestjs/swagger';
 
-import { VALIDATION_ERROR_CONTEXT } from '@src/exceptions';
-
 import { LoginDto } from '../dto/login.dto';
-
-const {} = VALIDATION_ERROR_CONTEXT;
 
 export function LoginAPIDocumentation(): MethodDecorator {
   return applyDecorators(

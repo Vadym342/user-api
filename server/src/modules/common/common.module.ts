@@ -1,8 +1,9 @@
 import { DynamicModule, Global, Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { LoggerModule, PinoLogger } from 'nestjs-pino';
+
 import { loggerConfig } from '@src/configs/logger.config';
 import { getDataSourceConfig } from '@src/database/ormconfig';
-import { LoggerModule, PinoLogger } from 'nestjs-pino';
 
 @Global()
 @Module({})

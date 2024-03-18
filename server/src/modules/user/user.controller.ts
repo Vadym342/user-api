@@ -32,7 +32,7 @@ export class UserController {
 
     await this.userValidatorService.doesUserAlreadyCreated(createUserDto.email);
 
-    return this.userService.createUser(createUserDto);
+    await this.userService.createUser(createUserDto);
   }
 
   @Get()

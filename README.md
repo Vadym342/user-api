@@ -1,5 +1,4 @@
 In progress:
-Migrations, seeds.
 Test containers.
 
 Update your .env file 
@@ -13,8 +12,15 @@ Node version is `v20.10.0`
 5. client port  `npm run start` : http://localhost:3000
 
 Backend:
+
 ########### Migrations and Seeds ###############
 
+Firstly, if you want manage entities by yourself you should turn off synchronization(should be "false") in file : https://github.com/Vadym342/user-api/blob/main/server/src/database/ormconfig.ts
+
+`seed:run` - run seeds 
+`seed:revert` - revert seeds
+`migration:run` - run migrations
+`migration:rollback` - revert migrations
 
 ########### e2e tests locally ###############
 1. Download Rancher or Docker Desktop 

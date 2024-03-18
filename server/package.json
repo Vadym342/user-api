@@ -19,7 +19,11 @@
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.config.ts --runInBand --logHeapUsage --forceExit"
+    "test:e2e": "jest --config ./test/jest-e2e.config.ts --runInBand --logHeapUsage --forceExit",
+    "seed:run": "npx sequelize-cli db:seed:all",
+    "seed:revert": "npx sequelize-cli db:seed:undo",
+    "migration:run": "npx sequelize-cli db:migrate",
+    "migration:rollback": "npx sequelize-cli db:migrate:undo"
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
@@ -48,6 +52,7 @@
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
     "sequelize": "^6.37.1",
+    "sequelize-cli": "^6.6.2",
     "sequelize-typescript": "^2.1.6",
     "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1"
